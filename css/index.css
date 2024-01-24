@@ -1,0 +1,153 @@
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rolling {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(100deg);
+  }
+  50% {
+    transform: rotate(350deg);
+  }
+  75% {
+    transform: rotate(600deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+/* Loader */
+.loader-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  animation: disappear 0.3s 2s forwards;
+}
+.loader-container .loader-content {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 50px;
+  animation: rolling 1s linear infinite;
+}
+.loader-container .loader-content::before, .loader-container .loader-content::after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  background: #9356DC;
+  transform: translateX(-10px);
+}
+.loader-container .loader-content::after {
+  background: #89C8FA;
+  right: 0;
+  left: auto;
+  transform: translateX(10px);
+}
+
+.button-content {
+  border-radius: 50px;
+  border: none;
+  height: 50px;
+  background-color: violet;
+  color: white;
+  transform: scale(0.9);
+  transition: 0.8s ease-out;
+}
+.button-content:hover {
+  transform: scale(1);
+  color: white;
+}
+
+.full-container {
+  background-color: var(--main-color);
+}
+
+.header {
+  margin: 20px;
+}
+
+.main-container {
+  width: 100%;
+  margin: 20px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.logo-ohmyfood {
+  width: 162px;
+  height: 44px;
+}
+
+.div-location {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+  box-shadow: 0px 5px 5px lightgray;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.background {
+  background-color: white;
+}
+
+.a {
+  background-color: #353535;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-content {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  transform: scale(1);
+  transition: 0.4s ease-out;
+}
+
+.button-content:hover {
+  transform: scale(1.15);
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+
+.button-content:focus {
+  box-shadow: 4px 4px 2px lightgrey;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+/*# sourceMappingURL=index.css.map */

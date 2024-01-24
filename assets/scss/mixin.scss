@@ -1,0 +1,32 @@
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rolling {
+    0% {   
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(100deg);
+    }
+
+    50% {
+        transform: rotate(350deg);
+    }
+
+    75% {
+        transform: rotate(600deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+
+}
