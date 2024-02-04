@@ -4,6 +4,7 @@
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 @keyframes rolling {
@@ -61,20 +62,40 @@
   transform: translateX(10px);
 }
 
-.button-content {
-  border-radius: 50px;
-  border: none;
-  height: 50px;
-  background-color: violet;
-  color: white;
-  transform: scale(0.9);
-  transition: 0.8s ease-out;
+.card .heart-container {
+  display: flex;
+  width: 22px;
+  height: 21px;
 }
-.button-content:hover {
-  transform: scale(1);
-  color: white;
+.card .heart-container:hover {
+  cursor: pointer;
+}
+.card .heart-container .fa-heart {
+  position: absolute;
+}
+.card .heart-container .fa-solid {
+  opacity: 0;
+}
+.card .heart-container .fa-solid:hover {
+  opacity: 1;
+}
+.card .heart-container .fa-regular:hover {
+  opacity: 0;
 }
 
+/*.button-content {
+    border-radius: 50px;
+    border: none;
+    height: 50px;
+    background-color: violet;
+    color: white;
+    transform: scale(0.9);
+    transition: 0.8s ease-out;
+    &:hover {
+        transform: scale(1);
+        color: white;
+    }
+}*/
 .full-container {
   background-color: var(--main-color);
 }
@@ -122,8 +143,7 @@
   align-items: center;
   justify-content: center;
 }
-
-.button-content {
+.button-container .button-content {
   padding: 15px;
   font-size: 16px;
   border-radius: 50px;
@@ -133,13 +153,12 @@
   transform: scale(1);
   transition: 0.4s ease-out;
 }
-
-.button-content:hover {
+.button-container .button-content:hover {
   transform: scale(1.15);
   background: linear-gradient(#9356DC, #FF79DA);
+  cursor: pointer;
 }
-
-.button-content:focus {
+.button-container .button-content:focus {
   box-shadow: 4px 4px 2px lightgrey;
 }
 
