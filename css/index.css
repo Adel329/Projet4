@@ -25,43 +25,42 @@
   }
 }
 /* Loader */
-.loader-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  animation: disappear 0.3s 2s forwards;
-}
-.loader-container .loader-content {
-  display: flex;
-  position: relative;
-  width: 80px;
-  height: 50px;
-  animation: rolling 1s linear infinite;
-}
-.loader-container .loader-content::before, .loader-container .loader-content::after {
-  content: "";
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  left: 0;
-  top: 0;
-  background: #9356DC;
-  transform: translateX(-10px);
-}
-.loader-container .loader-content::after {
-  background: #89C8FA;
-  right: 0;
-  left: auto;
-  transform: translateX(10px);
-}
-
+/*.loader-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter:blur(10px);
+    animation: disappear 0.3s 2s forwards;
+    .loader-content {
+        display: flex;
+        position: relative;
+        width: 80px;
+        height: 50px;
+        animation: rolling 1s linear infinite ; 
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            background: $primary-color;
+            transform: translateX(-10px);
+        }
+        &::after {
+            background: $blue-color;
+            right: 0;
+            left: auto;
+            transform: translateX(10px);
+        }
+    }
+}*/
 .card .heart-container {
   display: flex;
   width: 22px;
@@ -83,6 +82,13 @@
   opacity: 0;
 }
 
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
 /*.button-content {
     border-radius: 50px;
     border: none;
@@ -97,7 +103,7 @@
     }
 }*/
 .full-container {
-  background-color: var(--main-color);
+  background-color: #F3F3F3;
 }
 
 .header {
@@ -106,13 +112,13 @@
 
 .main-container {
   width: 100%;
-  margin: 20px 0 10px 0;
   display: flex;
+  padding: 10px;
   justify-content: center;
   background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
-.logo-ohmyfood {
+.main-container .logo-ohmyfood {
   width: 162px;
   height: 44px;
 }
@@ -120,18 +126,26 @@
 .div-location {
   display: flex;
   justify-content: center;
+  margin: 10px;
   background-color: #EAEAEA;
-  box-shadow: 0px 5px 5px lightgray;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .info-section {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 10px 15px 30px 15px;
 }
 
-.background {
+/* Fonctionnement */
+.tips-section {
+  width: 100%;
   background-color: white;
+  padding: 20px;
+}
+.tips-section .test {
+  list-style: none;
 }
 
 .a {
@@ -155,18 +169,10 @@
 }
 .button-container .button-content:hover {
   transform: scale(1.15);
-  background: linear-gradient(#9356DC, #FF79DA);
   cursor: pointer;
 }
 .button-container .button-content:focus {
   box-shadow: 4px 4px 2px lightgrey;
-}
-
-.card {
-  background-color: white;
-  border-radius: 20px;
-  padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 /*# sourceMappingURL=index.css.map */
