@@ -31,3 +31,9 @@
     }
 
 }
+
+@keyframes bounce { 
+     from {top: 100px;}
+     50% {top: 75px;}
+     to {top: 100px;}
+}
