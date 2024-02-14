@@ -4,7 +4,7 @@
 
 /* Loader */
 
-.loader-container {
+/*.loader-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -63,7 +63,8 @@
             }
         }
     }
-}
+}*/
+
 
 
 /*.button-content {
@@ -96,10 +97,10 @@
     justify-content: center;
     background-color: white;
     box-shadow:  0 0 5px rgba(0,0,0,.1);
-        .logo-ohmyfood {
-            width: 162px;
-            height: 44px;
-        }
+    .ohmyfood-title {
+        font-family: 'Shrikhand', serif;
+        font-size: 30px;
+    }    
 }
 
 
@@ -146,7 +147,6 @@
             padding: 0;
             gap: 20px;
         }
-                
 }
 
 
@@ -176,23 +176,26 @@
 
 /* Resto */
 
+.resto-section {
 
-.resto-card {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 19px;
+    .resto-title {
+        padding: 15px;
+    }
+    .resto-card {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+    }
+    .resto-card img {
+        max-width: 100%;
+        width: 346px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
 }
 
-.resto-card img {
-    max-width: 100%;
-    width: 346px;
-    height: 231px;
-    object-fit: cover;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-
-}
 
 
 .card {
@@ -207,6 +210,15 @@
             padding: 6px 12px;
             top: 13px;
             left: 248px;
+        }
+        .footer-card-title {
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 0 20px;
+            line-height: 0;
+            h4 {
+                font-weight: bold;
+            }
         }
         
 }
@@ -255,13 +267,18 @@
 /* Footer */ 
 
 .a {
-    background-color: #353535 ;
+    background-color: #353535;
     display: flex;
     flex-direction: column;
     color: white;
-    .a img {
-        width: 137px;
-        height: 27px;
-        color: white;
+    .ohmyfood-title {
+        font-family: 'Shrikhand', serif;
+        font-size: 18px;
+        padding: 10px 0 0 20px;
+    }
+    ol {
+        list-style-type: none;
+        padding: 0 0 0 20px;
+        line-height: 25px;
     }
 }

@@ -36,67 +36,66 @@
   }
 }
 /* Loader */
-.loader-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  animation: disappear 0.3s 1s forwards;
-}
-.loader-container .loader-content {
-  display: flex;
-  position: relative;
-  width: 80px;
-  height: 50px;
-  animation: rolling 1s linear infinite;
-}
-.loader-container .loader-content::before, .loader-container .loader-content::after {
-  content: "";
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  left: 0;
-  top: 0;
-  background: #9356DC;
-  transform: translateX(-10px);
-}
-.loader-container .loader-content::after {
-  background: #89C8FA;
-  right: 0;
-  left: auto;
-  transform: translateX(10px);
-}
-.loader-container .loader-content .loader {
-  background-color: #FF79DA;
-  width: 15px;
-  height: 15px;
-  border: 50px;
-  animation: bounce 2s ease-in-out;
-}
-.loader-container .loader-content .loader::before, .loader-container .loader-content .loader::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  left: 0;
-  top: 0;
-  background-color: #99E2D0;
-  transform: translateX(20px);
-}
-.loader-container .loader-content .loader::after {
-  background: #008766;
-  right: auto;
-  left: 0;
-  transform: translateX(-20px);
-}
-
+/*.loader-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter:blur(10px);
+    animation: disappear 0.3s 1s forwards;
+    .loader-content {
+        display: flex;
+        position: relative;
+        width: 80px;
+        height: 50px;
+        animation: rolling 1s linear infinite ; 
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            background: $primary-color;
+            transform: translateX(-10px);
+        }
+        &::after {
+            background: $blue-color;
+            right: 0;
+            left: auto;
+            transform: translateX(10px);
+        }
+        .loader {
+            background-color: $secondary-color;
+            width: 15px;
+            height: 15px;
+            border: 50px;
+            animation: bounce 2s ease-in-out;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                left: 0;
+                top: 0;
+                background-color: $green-color;
+                transform: translateX(20px);   
+            }
+            &::after {
+                background: $green-font-color;
+                right: auto;
+                left: 0;
+                transform: translateX(-20px);
+            }
+        }
+    }
+}*/
 /*.button-content {
     border-radius: 50px;
     border: none;
@@ -126,9 +125,9 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-.main-container .logo-ohmyfood {
-  width: 162px;
-  height: 44px;
+.main-container .ohmyfood-title {
+  font-family: "Shrikhand", serif;
+  font-size: 30px;
 }
 
 .div-location {
@@ -194,20 +193,21 @@
 }
 
 /* Resto */
-.resto-card {
+.resto-section .resto-title {
+  padding: 15px;
+}
+.resto-section .resto-card {
   margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 19px;
 }
-
-.resto-card img {
+.resto-section .resto-card img {
   max-width: 100%;
   width: 346px;
-  height: 231px;
+  height: 200px;
   object-fit: cover;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px 20px 0 0;
 }
 
 .card {
@@ -223,6 +223,15 @@
   padding: 6px 12px;
   top: 13px;
   left: 248px;
+}
+.card .footer-card-title {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 20px;
+  line-height: 0;
+}
+.card .footer-card-title h4 {
+  font-weight: bold;
 }
 
 .heart-container {
@@ -266,10 +275,15 @@
   flex-direction: column;
   color: white;
 }
-.a .a img {
-  width: 137px;
-  height: 27px;
-  color: white;
+.a .ohmyfood-title {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  padding: 10px 0 0 20px;
+}
+.a ol {
+  list-style-type: none;
+  padding: 0 0 0 20px;
+  line-height: 25px;
 }
 
 /*# sourceMappingURL=index.css.map */
