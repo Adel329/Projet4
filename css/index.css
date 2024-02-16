@@ -132,6 +132,11 @@
   font-family: "Shrikhand", serif;
   font-size: 30px;
 }
+.main-container .fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 35px;
+}
 
 .div-location {
   display: flex;
