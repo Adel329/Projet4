@@ -113,14 +113,9 @@
   background-color: #F3F3F3;
 }
 
-.header {
-  margin: 20px;
-}
-
 .main-container {
   width: 100%;
   display: flex;
-  padding: 10px 0 10px 0;
   justify-content: center;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -145,30 +140,7 @@
   margin: 10px 15px 30px 15px;
 }
 
-/* Fonctionnement */
-.tips-section {
-  width: 100%;
-  background-color: white;
-  padding: 20px;
-}
-.tips-section .test {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.tips-section .tips-button {
-  width: 322px;
-  height: 72px;
-  background-color: #F6F6F6;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-}
-.tips-section ol {
-  padding: 0;
-  gap: 20px;
-}
-
+/* Boutton */
 .button-container {
   display: flex;
   align-items: center;
@@ -192,7 +164,56 @@
   box-shadow: 4px 4px 2px lightgrey;
 }
 
+/* Fonctionnement */
+.tips-section {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+.tips-section .test {
+  display: flex;
+  flex-direction: row;
+  counter-reset: compteListe;
+}
+.tips-section .tips-button {
+  margin: 10px 0 10px 0;
+  width: 322px;
+  height: 72px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.tips-section .tips-button::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) "";
+  background: #9356DC;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: 15px;
+}
+.tips-section .fa-solid {
+  position: absolute;
+  left: 60px;
+}
+.tips-section .fa-store {
+  color: #9356DC;
+}
+.tips-section ol {
+  padding: 0;
+  list-style-type: none;
+}
+
 /* Resto */
+.resto-section {
+  margin-bottom: 50px;
+}
 .resto-section .resto-title {
   padding: 15px;
 }
@@ -227,7 +248,7 @@
 .card .footer-card-title {
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 20px;
+  padding: 0 0 15px 20px;
   line-height: 0;
 }
 .card .footer-card-title h4 {
@@ -235,7 +256,10 @@
 }
 
 .heart-container {
+  position: absolute;
   display: flex;
+  bottom: 20px;
+  right: 15px;
   justify-content: flex-end;
   min-width: 100%;
   width: 22px;
@@ -252,7 +276,9 @@
 }
 .heart-container .fa-solid:hover {
   opacity: 1;
-  color: #FF79DA;
+  /*color:$linear-gradient;
+  color: var($secondary-color, $primary-color); ???*/
+  color: #9356DC;
 }
 .heart-container .fa-regular:hover {
   opacity: 0;
