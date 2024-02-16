@@ -112,13 +112,21 @@
 .full-container {
   background-color: #F3F3F3;
 }
+.full-container a {
+  text-decoration: none;
+  color: black;
+}
 
+/***** Header *****/
 .main-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 375px;
+  height: 63px;
 }
 .main-container .ohmyfood-title {
   font-family: "Shrikhand", serif;
@@ -140,7 +148,7 @@
   margin: 10px 15px 30px 15px;
 }
 
-/* Boutton */
+/***** Boutton *****/
 .button-container {
   display: flex;
   align-items: center;
@@ -164,7 +172,7 @@
   box-shadow: 4px 4px 2px lightgrey;
 }
 
-/* Fonctionnement */
+/***** Fonctionnement *****/
 .tips-section {
   width: 100%;
   background-color: white;
@@ -210,7 +218,7 @@
   list-style-type: none;
 }
 
-/* Resto */
+/***** Resto *****/
 .resto-section {
   margin-bottom: 50px;
 }
@@ -282,6 +290,7 @@
 }
 .heart-container .fa-regular:hover {
   opacity: 0;
+  color: #9356DC;
 }
 
 /*.cards {
@@ -294,7 +303,7 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }*/
-/* Footer */
+/***** Footer *****/
 .a {
   background-color: #353535;
   display: flex;
