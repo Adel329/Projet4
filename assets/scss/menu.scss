@@ -41,22 +41,75 @@
         border-bottom: 4px solid $green-color;
     }
     .card-menu {
+        overflow: hidden;
+        height: 70px;
         display: flex;
-        padding: 10px;
         background-color: white;
         border-radius: 15px;
         box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
-        animation: slidein;
-        .card-menu-descritption {
+        animation: slidein 3s ease-in-out both;
+        .card-menu-description {
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin-left: 15px;
+            .card-description {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .card-title {
+                    font-family: "Roboto";
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 21px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #000000;
+
+                }  
+                .card-subtitle {
+                    font-family: Roboto;
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+            .price-container {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin: -40px;
+                height: 100%;
+                padding-bottom: 12px;
+                transition: 0.2s ease-in-out ;
+            }
         }
-        .card-title {
-            margin: 0;
-        }  
-        .card-subtitle {
-            margin: 0;
+        .check-container {
+            background-color: $green-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 100%;
+            position: relative;
+            right: -70px;
+            transition:  0.2s ease-in-out;
+            color: white;
         }
-        
+        &:hover {
+            .price-container {
+                margin: 10px;
+                transition: 0.2s ease-in-out;
+            }
+            .check-container {
+                right: 0;
+                transition: 0.2s ease-in-out;
+            }
+        }
     }
 }

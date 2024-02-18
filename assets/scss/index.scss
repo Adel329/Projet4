@@ -255,20 +255,20 @@
     }
     .fa-heart {
             position: absolute;
+            &:before {
+                background: $heart-gradient;
+                -webkit-background-clip: text;
+            }
     }
     .fa-solid {
         opacity: 0;
-        
-    &:hover{
-        opacity: 1;
-        /*color:$linear-gradient;
-        color: var($secondary-color, $primary-color); ???*/
-        color: $primary-color;
-    }
+        &:hover{
+            opacity: 1;
+        }
     }    
     .fa-regular:hover {
         opacity: 0;
-        color: $primary-color;
+        
     }
             
 }

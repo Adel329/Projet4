@@ -271,18 +271,18 @@
 .heart-container .fa-heart {
   position: absolute;
 }
+.heart-container .fa-heart:before {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+}
 .heart-container .fa-solid {
   opacity: 0;
 }
 .heart-container .fa-solid:hover {
   opacity: 1;
-  /*color:$linear-gradient;
-  color: var($secondary-color, $primary-color); ???*/
-  color: #9356DC;
 }
 .heart-container .fa-regular:hover {
   opacity: 0;
-  color: #9356DC;
 }
 
 /***** Footer *****/
