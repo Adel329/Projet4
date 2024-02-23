@@ -32,12 +32,33 @@
 
 }
 
+@mixin loading-menu-animation {
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}){
+            animation-delay: 100ms * $i;
+        } 
+
+    }
+    animation: slideIn 1s ease-in-out both;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 @keyframes bounce { 
      from {top: 100px;}
      50% {top: 75px;}
      to {top: 100px;}
 }
 
-@mixin opening-menu {
-    /*animatio-delay for nth*/
-}    
+/*@mixin opening-menu {
+    /*animatio-delay for nth
+}*/    

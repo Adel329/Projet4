@@ -1,10 +1,19 @@
 @import 'mixin.scss';
 @import 'variables.scss';
 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 
 /* Loader */
 
-/*.loader-container {
+.loader-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -15,55 +24,37 @@
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter:blur(10px);
     animation: disappear 0.3s 1s forwards;
-    .loader-content {
+    .loader {
         display: flex;
         position: relative;
         width: 80px;
         height: 50px;
-        animation: rolling 1s linear infinite ; 
-        &::before, &::after {
-            content: "";
-            position: absolute;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            left: 0;
-            top: 0;
-            background: $primary-color;
-            transform: translateX(-10px);
-        }
-        &::after {
-            background: $blue-color;
-            right: 0;
-            left: auto;
-            transform: translateX(10px);
-        }
-        .loader {
-            background-color: $secondary-color;
-            width: 15px;
-            height: 15px;
-            border: 50px;
-            animation: bounce 2s ease-in-out;
+        animation: bounce 0.5s linear infinite ; 
             &::before, &::after {
                 content: "";
                 position: absolute;
-                width: 30px;
-                height: 30px;
-                border-radius: 50px;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
                 left: 0;
                 top: 0;
-                background-color: $green-color;
-                transform: translateX(20px);   
+                background: $primary-color;
+                transform: translateX(-15px);
             }
             &::after {
-                background: $green-font-color;
-                right: auto;
-                left: 0;
-                transform: translateX(-20px);
+                background: $secondary-color;
+                right: 0;
+                left: auto;
+                transform: translateX(15px);
+                animation-delay: .50s;
             }
-        }
+            /*&::before {
+                background: $secondary-color;
+                border-radius: 50px;
+                transform: translateX(20px);
+            }*/
     }
-}*/
+}
 
 .full-container {
     background-color: $main-color;
@@ -257,7 +248,7 @@
 .heart-container {
     position: absolute;
     display: flex;
-    bottom: 20px;
+    bottom: 40px;
     right: 15px;
     justify-content: flex-end;
     min-width: 100%;
@@ -267,14 +258,13 @@
     .fa-heart {
         position: absolute;
         &:before {
-            width: 22px;
-            height: 21px;
             background: $heart-gradient;
             -webkit-background-clip: text;
         }
     }
     .fa-solid {
         opacity: 0;
+        color: transparent;
         &:hover{
             opacity: 1;
         }
