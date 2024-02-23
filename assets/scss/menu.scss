@@ -27,6 +27,7 @@
             width: 22px;
             height: 21px;
         }
+        
     }
 }
 .menu-title-card {
@@ -38,7 +39,7 @@
         font-size: 16px;
         padding:20px 0 5px;
         margin-bottom: 15px;
-        border-bottom: 4px solid $green-color;
+        border-bottom: 3px solid $green-color;
     }
     .card-menu {
         overflow: hidden;
@@ -87,6 +88,8 @@
                 height: 100%;
                 padding-bottom: 12px;
                 transition: 0.2s ease-in-out ;
+                
+
             }
         }
         .check-container {
