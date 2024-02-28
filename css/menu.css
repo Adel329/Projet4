@@ -56,48 +56,49 @@ body::-webkit-scrollbar {
 }
 
 /* Loader */
-/*.loader-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter:blur(10px);
-    animation: disappear 0.3s 1s forwards;
-    .loader {
-        display: flex;
-        position: relative;
-        width: 80px;
-        height: 50px;
-        animation: bounce 0.5s linear infinite ; 
-            &::before, &::after {
-                content: "";
-                position: absolute;
-                height: 50px;
-                width: 50px;
-                border-radius: 50%;
-                left: 0;
-                top: 0;
-                background: $primary-color;
-                transform: translateX(-15px);
-            }
-            &::after {
-                background: $secondary-color;
-                right: 0;
-                left: auto;
-                transform: translateX(15px);
-                animation-delay: .50s;
-            }
-            &::before {
-                background: $secondary-color;
-                border-radius: 50px;
-                transform: translateX(20px);
-            }
-    }
-}*/
+.loader-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  animation: disappear 0.3s 1s forwards;
+}
+.loader-container .loader {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 50px;
+  animation: bounce 0.5s linear infinite;
+  /*&::before {
+      background: $green-color;
+      border-radius: 50px;
+      transform: translateX(20px);
+  }*/
+}
+.loader-container .loader::before, .loader-container .loader::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  background: #99E2D0;
+  transform: translateX(-15px);
+}
+.loader-container .loader::after {
+  background: #FF79DA;
+  right: 0;
+  left: auto;
+  transform: translateX(15px);
+  animation-delay: 0.5s;
+}
+
 .full-container {
   background-color: #F3F3F3;
 }
@@ -243,7 +244,13 @@ body::-webkit-scrollbar {
   margin-bottom: 50px;
 }
 .resto-section .resto-title {
-  padding: 15px;
+  padding: 20px 20px 0 20px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .resto-section .resto-card {
   margin: 10px;
@@ -351,17 +358,36 @@ body::-webkit-scrollbar {
 /* desktop devices (tablets, more/equal than 1440px) */
 @media (min-width: 1440px) {
   .tips-section {
-    width: 100%;
+    width: initial;
+    padding: 50px 180px;
   }
-  .tips-section .tuto-step {
+  .tips-section .tips-title {
+    padding: 0;
+  }
+  .tips-section ol {
+    max-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 25px;
+  }
+  .tips-section ol .tips-button {
+    width: 322px;
+  }
+  .tips-section ol .tips-button::before {
+    position: relative;
+    left: -83px;
+  }
+  .tips-section .fa-solid {
+    position: relative;
+    left: -50px;
   }
   .resto-section {
     margin-bottom: 50px;
     padding: 0 180px;
     gap: 28px;
+  }
+  .resto-section .resto-title {
+    padding: 0;
   }
   .resto-section .resto-card {
     margin: 0;
@@ -481,6 +507,12 @@ body::-webkit-scrollbar {
 .menu-title-card .card-menu:nth-child(5) {
   animation-delay: 500ms;
 }
+.menu-title-card .card-menu:hover .card-menu-description {
+  width: 80%;
+}
+.menu-title-card .card-menu:hover .card-description {
+  width: 80%;
+}
 .menu-title-card .card-menu .card-menu-description {
   width: 100%;
   height: 100%;
@@ -494,6 +526,9 @@ body::-webkit-scrollbar {
   flex-direction: column;
   gap: 5px;
 }
+.menu-title-card .card-menu .card-menu-description .card-description:hover {
+  width: 80%;
+}
 .menu-title-card .card-menu .card-menu-description .card-description .card-title {
   font-family: "Roboto";
   font-size: 18px;
@@ -503,6 +538,9 @@ body::-webkit-scrollbar {
   letter-spacing: 0em;
   text-align: left;
   color: #000000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-title-card .card-menu .card-menu-description .card-description .card-subtitle {
   font-family: Roboto;
@@ -511,6 +549,9 @@ body::-webkit-scrollbar {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-title-card .card-menu .card-menu-description .price-container {
   position: relative;
@@ -565,6 +606,9 @@ body::-webkit-scrollbar {
   }
   .button-content {
     margin-bottom: 25px;
+  }
+  .menu-title-card .card-menu:hover .card-menu-description {
+    width: 90%;
   }
 }
 
