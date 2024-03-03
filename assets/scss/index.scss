@@ -30,29 +30,69 @@ body {
         width: 80px;
         height: 50px;
         animation: bounce 0.5s linear infinite ; 
-            &::before, &::after {
-                content: "";
-                position: absolute;
-                height: 25px;
-                width: 25px;
-                border-radius: 50%;
-                left: 0;
-                top: 0;
-                background: $green-color;
-                transform: translateX(-15px);
-            }
-            &::after {
-                background: $secondary-color;
+            
+            /*&::after {
+                background: $primary-color;
                 right: 0;
                 left: auto;
                 transform: translateX(15px);
                 animation-delay: .50s;
-            }
-            /*&::before {
-                background: $green-color;
-                border-radius: 50px;
-                transform: translateX(20px);
             }*/
+            .loader-content-1 {
+                display: flex;
+                position: relative;
+                animation: bounce 0.5 linear infinite;
+                &::before , &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    top: 0;
+                    left: 0;
+                    background: $primary-color;
+                    transform: translateX(-50px);
+                }
+               /*&::after {
+                background: $secondary-color;
+                top: 0;
+                right: 0;
+                transform: translateX(30px);
+                animation-delay: 0.5s;
+               }*/
+            }
+            .loader-content-2 {
+                display: flex;
+                position: relative;
+                animation: bouncing 0.5 linear infinite;
+                &::before , &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    top: 0;
+                    left: 0;
+                    background: $green-color;
+                    transform: translateX(0);
+                }
+            }
+            .loader-content-3 {
+                display: flex;
+                position: relative;
+                animation: bounce 0.5 linear infinite;
+                &::before , &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                    transform: translateX(50px);
+                }
+            }
     }
 }
 
@@ -314,7 +354,7 @@ body {
 
 /***** Footer *****/ 
 
-.a {
+.footer-container {
     background-color: #353535;
     display: flex;
     flex-direction: column;
@@ -342,21 +382,27 @@ body {
 @media (min-width: 1440px) {
 
     .tips-section {
-        width: initial;
+        width: auto;
         padding: 50px 180px;
         .tips-title {
+            margin: 0 80px;
             padding: 0;
+        }
+        .tuto-step {
+            justify-content: center;
         }
         ol {
             max-width: 100%;
             display: flex;
             flex-direction: row;
+            justify-content: center;
             gap: 25px;
             .tips-button {
                 width: 322px;
+                gap: 25px;
                 &::before {
                     position: relative;
-                    left: -83px;
+                    left: -70px;
                 }
             }
         }
@@ -368,10 +414,14 @@ body {
 
 
     .resto-section {
+        max-width: 100%;
         margin-bottom: 50px;
         padding: 0 180px;
+        display: flex;
+        flex-direction: column;
         gap: 28px;
         .resto-title {
+            margin: 0 80px;
             padding: 0;
         }
         .resto-card {
@@ -383,6 +433,7 @@ body {
         .resto-media-card {
             display: flex;
             flex-direction: row;
+            justify-content: center;
             gap: 100px;
         }
         .resto-card img {
@@ -397,6 +448,12 @@ body {
     .card {
         max-width: 100%;
         width: 490px;
+        .card img {
+            position: relative;
+            top: -57px;
+            width: 499px;
+
+        }
         .new-card {
             border-radius: 2px;
             width: 61px;
@@ -406,7 +463,7 @@ body {
         }
     }
 
-    .a {
+    .footer-container {
         padding: 60px 0 30px 0;
         flex-direction: row-reverse;
         align-items: flex-end;

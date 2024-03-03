@@ -74,29 +74,68 @@ body::-webkit-scrollbar {
   width: 80px;
   height: 50px;
   animation: bounce 0.5s linear infinite;
-  /*&::before {
-      background: $green-color;
-      border-radius: 50px;
-      transform: translateX(20px);
+  /*&::after {
+      background: $primary-color;
+      right: 0;
+      left: auto;
+      transform: translateX(15px);
+      animation-delay: .50s;
   }*/
 }
-.loader-container .loader::before, .loader-container .loader::after {
+.loader-container .loader .loader-content-1 {
+  display: flex;
+  position: relative;
+  animation: bounce 0.5 linear infinite;
+  /*&::after {
+   background: $secondary-color;
+   top: 0;
+   right: 0;
+   transform: translateX(30px);
+   animation-delay: 0.5s;
+  }*/
+}
+.loader-container .loader .loader-content-1::before, .loader-container .loader .loader-content-1::after {
   content: "";
   position: absolute;
-  height: 25px;
   width: 25px;
+  height: 25px;
   border-radius: 50%;
-  left: 0;
   top: 0;
-  background: #99E2D0;
-  transform: translateX(-15px);
+  left: 0;
+  background: #9356DC;
+  transform: translateX(-50px);
 }
-.loader-container .loader::after {
+.loader-container .loader .loader-content-2 {
+  display: flex;
+  position: relative;
+  animation: bouncing 0.5 linear infinite;
+}
+.loader-container .loader .loader-content-2::before, .loader-container .loader .loader-content-2::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #99E2D0;
+  transform: translateX(0);
+}
+.loader-container .loader .loader-content-3 {
+  display: flex;
+  position: relative;
+  animation: bounce 0.5 linear infinite;
+}
+.loader-container .loader .loader-content-3::before, .loader-container .loader .loader-content-3::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
   background: #FF79DA;
-  right: 0;
-  left: auto;
-  transform: translateX(15px);
-  animation-delay: 0.5s;
+  transform: translateX(50px);
 }
 
 .full-container {
@@ -332,23 +371,23 @@ body::-webkit-scrollbar {
 }
 
 /***** Footer *****/
-.a {
+.footer-container {
   background-color: #353535;
   display: flex;
   flex-direction: column;
   color: white;
 }
-.a .ohmyfood-title {
+.footer-container .ohmyfood-title {
   font-family: "Shrikhand", serif;
   font-size: 18px;
   padding: 10px 0 0 20px;
 }
-.a ol {
+.footer-container ol {
   list-style-type: none;
   padding: 0 0 0 20px;
   line-height: 25px;
 }
-.a ol .fa-solid {
+.footer-container ol .fa-solid {
   padding-right: 10px;
   width: 11px;
   height: 13px;
@@ -358,35 +397,45 @@ body::-webkit-scrollbar {
 /* desktop devices (tablets, more/equal than 1440px) */
 @media (min-width: 1440px) {
   .tips-section {
-    width: initial;
+    width: auto;
     padding: 50px 180px;
   }
   .tips-section .tips-title {
+    margin: 0 80px;
     padding: 0;
+  }
+  .tips-section .tuto-step {
+    justify-content: center;
   }
   .tips-section ol {
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 25px;
   }
   .tips-section ol .tips-button {
     width: 322px;
+    gap: 25px;
   }
   .tips-section ol .tips-button::before {
     position: relative;
-    left: -83px;
+    left: -70px;
   }
   .tips-section .fa-solid {
     position: relative;
     left: -50px;
   }
   .resto-section {
+    max-width: 100%;
     margin-bottom: 50px;
     padding: 0 180px;
+    display: flex;
+    flex-direction: column;
     gap: 28px;
   }
   .resto-section .resto-title {
+    margin: 0 80px;
     padding: 0;
   }
   .resto-section .resto-card {
@@ -398,6 +447,7 @@ body::-webkit-scrollbar {
   .resto-section .resto-media-card {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 100px;
   }
   .resto-section .resto-card img {
@@ -411,6 +461,11 @@ body::-webkit-scrollbar {
     max-width: 100%;
     width: 490px;
   }
+  .card .card img {
+    position: relative;
+    top: -57px;
+    width: 499px;
+  }
   .card .new-card {
     border-radius: 2px;
     width: 61px;
@@ -418,22 +473,22 @@ body::-webkit-scrollbar {
     top: 13px;
     left: 385px;
   }
-  .a {
+  .footer-container {
     padding: 60px 0 30px 0;
     flex-direction: row-reverse;
     align-items: flex-end;
   }
-  .a .ohmyfood-title {
+  .footer-container .ohmyfood-title {
     padding: 0 25px;
   }
-  .a ol {
+  .footer-container ol {
     margin: 0;
     align-items: flex-end;
     display: flex;
     flex-direction: row;
     gap: 7px;
   }
-  .a ol li {
+  .footer-container ol li {
     width: 170px;
   }
 }
