@@ -5,5 +5,5 @@ $blue-color: #89C8FA;
 $blue2-color: #003A68;
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
-$linear-gradient:($primary-color, $secondary-color);
+$linear-gradient: linear-gradient($secondary-color, $primary-color);
 $heart-gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);

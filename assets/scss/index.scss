@@ -27,46 +27,31 @@ body {
     .loader {
         display: flex;
         position: relative;
+        justify-content: center;
         width: 80px;
         height: 50px;
-        animation: bounce 0.5s linear infinite ; 
-            
-            /*&::after {
-                background: $primary-color;
-                right: 0;
-                left: auto;
-                transform: translateX(15px);
-                animation-delay: .50s;
-            }*/
-            .loader-content-1 {
-                display: flex;
-                position: relative;
-                animation: bounce 0.5 linear infinite;
-                &::before , &::after {
-                    content: "";
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    top: 0;
-                    left: 0;
-                    background: $primary-color;
-                    transform: translateX(-50px);
-                }
-               /*&::after {
-                background: $secondary-color;
+        .loader-content-1 {
+            display: flex;
+            position: relative;
+            animation: rolling 1.5s ease-in-out;
+            &::before , &::after {
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
                 top: 0;
-                right: 0;
-                transform: translateX(30px);
-                animation-delay: 0.5s;
-               }*/
+                left: 0;
+                background: $primary-color;
+                transform: translateX(-100px);
             }
-            .loader-content-2 {
-                display: flex;
-                position: relative;
-                animation: bouncing 0.5 linear infinite;
-                &::before , &::after {
-                    content: "";
+        }
+        .loader-content-2 {
+            display: flex;
+            position: relative;
+            animation: bounce 0.5s linear infinite;
+            &::before , &::after {
+                content: "";
                     position: absolute;
                     width: 25px;
                     height: 25px;
@@ -76,23 +61,23 @@ body {
                     background: $green-color;
                     transform: translateX(0);
                 }
+        }
+        .loader-content-3 {
+            display: flex;
+            position: relative;
+            animation: rolling 1.5s ease-in-out;
+            &::before , &::after {
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                background: $secondary-color;
+                transform: translateX(100px);
             }
-            .loader-content-3 {
-                display: flex;
-                position: relative;
-                animation: bounce 0.5 linear infinite;
-                &::before , &::after {
-                    content: "";
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    top: 0;
-                    left: 0;
-                    background: $secondary-color;
-                    transform: translateX(50px);
-                }
-            }
+        }
     }
 }
 
@@ -162,7 +147,7 @@ body {
         border-radius: 50px;
         border: none;
         color: white;
-        background: linear-gradient($secondary-color, $primary-color);
+        background: $linear-gradient;
         font-family: Roboto;
         font-size: 16px;
         font-weight: 500;
@@ -329,6 +314,7 @@ body {
     justify-content: flex-end;
     &:hover {
         cursor: pointer;
+        mix-blend-mode: $heart-gradient;
     }
     .fa-heart {
         position: absolute;
@@ -336,18 +322,23 @@ body {
             background: $heart-gradient;
             -webkit-background-clip: text;
         }
-    }
-    .fa-solid {
-        opacity: 0;
-        color: transparent;
-        &:hover{
-            opacity: 1;
+        &:hover {
+            cursor: pointer;
         }
-    }    
+    }
     .fa-regular:hover {
         opacity: 0;
         
     }
+    .fa-solid {
+        opacity: 0;
+        transition: 1s;
+        color: transparent;
+        &:hover {
+            opacity: 1;
+        }
+
+    }    
             
 }
 

@@ -54,11 +54,10 @@
 
 
 @keyframes bounce { 
-     from {top: 100px;}
-     50% {top: 75px;}
-     to {top: 100px;}
+     from {top: 25px;}
+     25% {top: 15;}
+     50% {top: 25px}
+     75% {top: 35px}
+     to {top: 25px;}
 }
 
-/*@mixin opening-menu {
-    /*animatio-delay for nth
-}*/    
