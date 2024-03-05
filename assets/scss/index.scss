@@ -13,7 +13,7 @@ body {
 
 /* Loader */
 
-.loader-container {
+/*.loader-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -79,7 +79,7 @@ body {
             }
         }
     }
-}
+}*/
 
 .full-container {
     background-color: $main-color;
@@ -159,9 +159,7 @@ body {
         &:hover {
             transform: scale(1.15);
             cursor: pointer;
-        }
-        &:focus {
-            box-shadow: 4px 4px 2px lightgrey;
+            box-shadow: 10px 10px 5px lightgrey;
         }
     }
        
@@ -312,34 +310,29 @@ body {
     bottom: 35px;
     right: 15px;
     justify-content: flex-end;
-    &:hover {
-        cursor: pointer;
-        mix-blend-mode: $heart-gradient;
-    }
+
     .fa-heart {
         position: absolute;
+
         &:before {
             background: $heart-gradient;
             -webkit-background-clip: text;
+            /*transform: translateX(1.25);*/
         }
         &:hover {
             cursor: pointer;
+            color: $heart-gradient;
         }
-    }
-    .fa-regular:hover {
-        opacity: 0;
-        
     }
     .fa-solid {
         opacity: 0;
-        transition: 1s;
         color: transparent;
+
         &:hover {
             opacity: 1;
+            animation: slideIn 0.5s ease-in-out;
         }
-
-    }    
-            
+    }
 }
 
 
@@ -372,6 +365,8 @@ body {
 /* desktop devices (tablets, more/equal than 1440px) */
 @media (min-width: 1440px) {
 
+/***** Fonctionnement *****/
+
     .tips-section {
         width: auto;
         padding: 50px 180px;
@@ -403,6 +398,7 @@ body {
         }
     }
 
+/***** Restaurant *****/
 
     .resto-section {
         max-width: 100%;
@@ -453,6 +449,8 @@ body {
             left: 385px;
         }
     }
+
+/***** Footer *****/
 
     .footer-container {
         padding: 60px 0 30px 0;
