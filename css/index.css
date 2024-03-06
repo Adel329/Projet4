@@ -356,7 +356,7 @@ body::-webkit-scrollbar {
 }
 .heart-container .fa-solid:hover {
   opacity: 1;
-  animation: slideIn 0.5s ease-in-out;
+  animation: slideIn 0.7s ease-in-out;
 }
 
 /***** Footer *****/
@@ -406,11 +406,13 @@ body::-webkit-scrollbar {
   }
   .tips-section ol .tips-button {
     width: 322px;
-    gap: 25px;
+    gap: 0;
+    display: flex;
+    justify-content: center;
   }
   .tips-section ol .tips-button::before {
     position: relative;
-    left: -70px;
+    left: -80px;
   }
   .tips-section .fa-solid {
     position: relative;
@@ -426,7 +428,7 @@ body::-webkit-scrollbar {
     gap: 28px;
   }
   .resto-section .resto-title {
-    margin: 0 80px;
+    margin: 0 60px;
     padding: 0;
   }
   .resto-section .resto-card {

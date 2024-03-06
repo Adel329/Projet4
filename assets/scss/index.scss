@@ -330,7 +330,7 @@ body {
 
         &:hover {
             opacity: 1;
-            animation: slideIn 0.5s ease-in-out;
+            animation: slideIn 0.7s ease-in-out;
         }
     }
 }
@@ -385,10 +385,13 @@ body {
             gap: 25px;
             .tips-button {
                 width: 322px;
-                gap: 25px;
+                gap: 0;
+                display: flex;
+                justify-content: center;
+                
                 &::before {
                     position: relative;
-                    left: -70px;
+                    left: -80px;
                 }
             }
         }
@@ -408,7 +411,7 @@ body {
         flex-direction: column;
         gap: 28px;
         .resto-title {
-            margin: 0 80px;
+            margin: 0 60px;
             padding: 0;
         }
         .resto-card {
