@@ -35,7 +35,7 @@
 @mixin loading-menu-animation {
     @for $i from 1 through 5 {
         &:nth-child(#{$i}){
-            animation-delay: 100ms * $i;
+            animation-delay: 350ms * $i;
         } 
 
     }
