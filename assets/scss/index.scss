@@ -10,8 +10,8 @@ body {
     }
 }
 
-
-/* Loader */
+/* NAAAAAAAAV */
+/***** Loader *****/
 
 .loader-container {
     height: 100%;
@@ -40,29 +40,13 @@ body {
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
-                top: 0;
+                top: auto;
                 left: 0;
                 background: $primary-color;
                 transform: translateX(-100px);
             }
         }
         .loader-content-2 {
-            display: flex;
-            position: relative;
-            animation: bounce 0.5s linear infinite;
-            &::before , &::after {
-                content: "";
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    top: 0;
-                    left: 0;
-                    background: $green-color;
-                    transform: translateX(0);
-                }
-        }
-        .loader-content-3 {
             display: flex;
             position: relative;
             animation: rolling 1.5s ease-in-out;
@@ -313,11 +297,12 @@ body {
 
     .fa-heart {
         position: absolute;
+        cursor: pointer;
 
         &:before {
             background: $heart-gradient;
             -webkit-background-clip: text;
-            /*transform: translateX(1.25);*/
+            background-clip: text;
         }
         &:hover {
             cursor: pointer;
@@ -329,6 +314,7 @@ body {
         color: transparent;
 
         &:hover {
+            cursor: pointer;
             opacity: 1;
             animation: slideIn 0.7s ease-in-out;
         }

@@ -61,7 +61,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Loader */
+/* NAAAAAAAAV */
+/***** Loader *****/
 .loader-container {
   height: 100%;
   width: 100%;
@@ -92,7 +93,7 @@ body::-webkit-scrollbar {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  top: 0;
+  top: auto;
   left: 0;
   background: #9356DC;
   transform: translateX(-100px);
@@ -100,25 +101,9 @@ body::-webkit-scrollbar {
 .loader-container .loader .loader-content-2 {
   display: flex;
   position: relative;
-  animation: bounce 0.5s linear infinite;
-}
-.loader-container .loader .loader-content-2::before, .loader-container .loader .loader-content-2::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  background: #99E2D0;
-  transform: translateX(0);
-}
-.loader-container .loader .loader-content-3 {
-  display: flex;
-  position: relative;
   animation: rolling 1.5s ease-in-out;
 }
-.loader-container .loader .loader-content-3::before, .loader-container .loader .loader-content-3::after {
+.loader-container .loader .loader-content-2::before, .loader-container .loader .loader-content-2::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -341,11 +326,12 @@ body::-webkit-scrollbar {
 }
 .heart-container .fa-heart {
   position: absolute;
+  cursor: pointer;
 }
 .heart-container .fa-heart:before {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
-  /*transform: translateX(1.25);*/
+  background-clip: text;
 }
 .heart-container .fa-heart:hover {
   cursor: pointer;
@@ -356,6 +342,7 @@ body::-webkit-scrollbar {
   color: transparent;
 }
 .heart-container .fa-solid:hover {
+  cursor: pointer;
   opacity: 1;
   animation: slideIn 0.7s ease-in-out;
 }

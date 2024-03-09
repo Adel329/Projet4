@@ -132,6 +132,7 @@
             }
         }
         &:hover {
+            cursor: pointer;
             .price-container {
                 margin: 10px;
                 transition: 0.2s ease-in-out;
