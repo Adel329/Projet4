@@ -40,7 +40,7 @@
     top: 25px;
   }
   25% {
-    top: 15;
+    top: 15px;
   }
   50% {
     top: 25px;
@@ -93,7 +93,6 @@ body::-webkit-scrollbar {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  top: auto;
   left: 0;
   background: #9356DC;
   transform: translateX(-100px);
@@ -335,7 +334,7 @@ body::-webkit-scrollbar {
 }
 .heart-container .fa-heart:hover {
   cursor: pointer;
-  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .heart-container .fa-solid {
   opacity: 0;

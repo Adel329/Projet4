@@ -40,7 +40,6 @@ body {
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
-                top: auto;
                 left: 0;
                 background: $primary-color;
                 transform: translateX(-100px);
@@ -306,7 +305,7 @@ body {
         }
         &:hover {
             cursor: pointer;
-            color: $heart-gradient;
+            background: $heart-gradient;
         }
     }
     .fa-solid {
