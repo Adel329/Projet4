@@ -1,0 +1,68 @@
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes rolling {
+    0% {   
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(100deg);
+    }
+
+    50% {
+        transform: rotate(350deg);
+    }
+
+    75% {
+        transform: rotate(600deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+
+}
+
+@mixin loading-animation {
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}){
+            animation-delay: 600ms * $i;
+        } 
+
+    }
+    animation: slideIn 1s ease-in-out both;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0.5)
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes bounce { 
+     from {top: 25px;}
+     25% {top: 15px;}
+     50% {top: 25px}
+     75% {top: 35px}
+     to {top: 25px;}
+}
+
